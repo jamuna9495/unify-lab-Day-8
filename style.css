@@ -1,0 +1,149 @@
+/* 1. Global Reset & Theme */
+:root {
+    --bg-color: #050505;
+    --text-primary: #ffffff;
+    --accent-color: #00ff41; /* Matrix Green */
+    --border-color: #222222;
+    --font-main: 'Inter', -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 2. Header Style */
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.h-status { color: var(--accent-color); }
+
+/* 3. Hero Section */
+.hero-creative {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-primary);
+}
+
+/* 4. Marquee (Moving Text) */
+.marquee-section {
+    background: var(--accent-color);
+    color: black;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-track {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+    font-weight: 900;
+    font-size: 0.9rem;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* 5. Project Grid - Images Visible Logic */
+.project-asym {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    padding: 5rem 10%;
+}
+
+.p-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.p-visual {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #111; /* Image load aagalana ithu theriyum */
+}
+
+.p-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image-ai stretch aagamal correct-aga kaatum */
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.p-card:hover img {
+    filter: grayscale(0%);
+}
+
+.p-info h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* 6. Metrics Section */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.metric {
+    padding: 3rem 1rem;
+    text-align: center;
+    border-right: 1px solid var(--border-color);
+}
+
+.m-val {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* 7. Footer */
+.portfolio-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 10%;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+.f-social a {
+    color: white;
+    margin-left: 1.5rem;
+    text-decoration: none;
+}
