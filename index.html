@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBH_REID Portfolio</title>
+    <style>
+        /* CSS to make everything visible and stylish */
+        body {
+            background-color: #0a0a0a; /* Dark theme */
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        .portfolio-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .h-status { color: #00ff41; } /* Neon Green */
+
+        .hero-creative {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-text h1 span { color: #00ff41; }
+
+        /* Image styling - Ithu thaan mukkiyam */
+        .p-visual img {
+            width: 100%; /* Image box size-ku thakatha mari maarum */
+            max-width: 600px; /* Romba perusa aagama iruka */
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .project-asym {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 50px;
+        }
+
+        .metrics-grid {
+            display: flex;
+            justify-content: space-around;
+            background: #111;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        .m-val { font-size: 2.5rem; font-weight: bold; color: #00ff41; }
+
+        .portfolio-footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .f-social a { color: #fff; margin: 0 10px; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <header class="portfolio-header">
+        <div class="h-brand">TBH_REID // 2026</div>
+        <div class="h-status">AVAILABLE_FOR_HIRE</div>
+    </header>
+
+    <main class="creative-shell">
+        <section class="hero-creative">
+            <div class="hero-text">
+                <h1>Creative <span>Engineering</span> Studio</h1>
+                <p>Architecting digital experiences at the intersection of structural logic and asymmetric aesthetics.</p>
+            </div>
+            <div class="hero-scroll">&darr; SCROLL_EXPERIENCE</div>
+        </section>
+
+        <section class="project-asym">
+            <div class="p-card p-1">
+                <div class="p-visual">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800" alt="Tech Setup">
+                </div>
+                <div class="p-info"><h3>Project_Alpha</h3><p>Spatial Interface Design</p></div>
+            </div>
+            
+            <div class="p-card p-2">
+                <div class="p-visual">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Engineering">
+                </div>
+                <div class="p-info"><h3>Project_Beta</h3><p>Generative Motion Architecture</p></div>
+            </div>
+        </section>
+
+        <section class="metrics-grid">
+            <div class="metric"><div class="m-val">120+</div><div class="m-lab">Projects_Delivered</div></div>
+            <div class="metric"><div class="m-val">12</div><div class="m-lab">Design_Awards</div></div>
+            <div class="metric"><div class="m-val">8ms</div><div class="m-lab">Target_Latency</div></div>
+        </section>
+    </main>
+
+    <footer class="portfolio-footer">
+        <div class="f-copy">&copy; 2026 CREATIVE_ENGINEERING_LAB</div>
+        <nav class="f-social">
+            <a href="#">GITHUB</a>
+            <a href="#">X_COM</a>
+            <a href="#">DRIBBBLE</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
